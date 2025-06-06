@@ -50,3 +50,5 @@ if (sign == "+") {
 throw new Error("This is a test error.");
 console.log("end")
 console.log("End"); */
+
+/* THIS IS A COMMENT */
