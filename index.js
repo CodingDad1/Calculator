@@ -12,8 +12,8 @@ class Calculator {
 
     // clear a single number
     clear() {
-        this.currentOperandTextElement = ''
-        this.previousOperandTextElement = ''
+        this.currentOper = ''
+        this.previousOper = ''
         this.operation = undefined
     }
     // deletes a single number
@@ -22,9 +22,8 @@ class Calculator {
     }
     //adds number to operation screen (when a number is clicked it will show up like real calculator)
     appendNumber(number){
-        if (number === '.' && this.currentOperand.inludes('.')) return
+        if (number === '.' && this.currentOperand.includes('.')) return
         this.currentOperand = this.currentOperand.toString() + number.toString()
-
     }
     // + - * /
     chooseOperation(operation){

@@ -14,7 +14,7 @@ body {
     align-content: center;
     min-height: 100vh;
     grid-template-columns: repeat(4, 100px);
-    grid-template-rows: minmax(120, auto) repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(4, 100px);
 }
 .calculator-grid > button {
     cursor: pointer;
@@ -41,8 +41,7 @@ body {
     word-break: break-all;
 }
 
-.output .previous-operan
-d {
+.output .previous-operand {
     color: rgba(255, 255, 255, .75);
     font-size: 1.5rem;
 }
