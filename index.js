@@ -11,11 +11,15 @@ class Calculator {
 
 
     // clear a single number
+
+
     clear() {
-        this.currentOper = ''
-        this.previousOper = ''
+        this.currentOperand = '' // this.current and previous were cut off, 'this.currentOper'
+        this.previousOperand = ''
         this.operation = undefined
     }
+
+
     // deletes a single number
     delete(){
         this.currentOperand = this.currentOperand.toString().slice(0, -1)
@@ -36,9 +40,11 @@ class Calculator {
         this.currentOperand = ''
     }
     // takes both numbers computes what needs to be displayed into a single number
+
+
     compute(){
         let computation
-        const prev = parseFloat(this.previoousOperand)
+        const prev = parseFloat(this.previousOperand) // previous was spelt wrong 'previoous'
         const current = parseFloat(this.currentOperand)
         if (isNaN(prev) || isNaN(current)) return
         switch(this.operation) {
@@ -61,6 +67,9 @@ class Calculator {
         this.operation = undefined
         this.previousOperand = ''
     }
+
+    
+
     getDisplayNumber(number) {
         const stringNumber = number.toString()
         const integerDigits = parseFloat(stringNumber.split('.')[0])
@@ -72,7 +81,9 @@ class Calculator {
             integerDisplay = integerDigits.toLocaleString('en', {maximumFractionDigits: 0})
         }
         if (decimalDigits != null){
-            `${integerDisplay} ${decimalDigits}`
+            return `${integerDisplay}.${decimalDigits}`
+            //In this line there was no return and no '.' inbetween integerDisplay and decimalDigits
+            //so any time you would do just '.' it would display undefined.
         } else {
             return integerDisplay
         }
@@ -142,7 +153,7 @@ deleteButton.addEventListener('click', () => {
 
 
 
-
+// Terminal Only Calculator.
 
 
 
