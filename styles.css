@@ -41,7 +41,8 @@ body {
     word-break: break-all;
 }
 
-.output .previous-operand {
+.output .previous-operan
+d {
     color: rgba(255, 255, 255, .75);
     font-size: 1.5rem;
 }
